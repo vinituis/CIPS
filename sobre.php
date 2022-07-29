@@ -21,6 +21,11 @@
     </div>
 </div>
 
+<div class="aviso">
+    <h3 class="title">estamos empenhados em cuidar das crianças, adolescentes, mulheres idosos e da família</h3>
+    <h4>Levar acesso a direitos e inclusão social a todos</h4>
+</div>
+
 <?php include "./mod/rodape.php"?>
 
 </body>

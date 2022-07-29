@@ -37,3 +37,36 @@ hr {
     width: 100%;
     margin-bottom: 1rem;
 }
+
+.aviso {
+    background-color: var(--cor-3);
+    padding: 2rem 10rem;
+}
+
+.aviso h3 {
+    color: #fff;
+    text-align: center;
+}
+
+.aviso h4 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .conteudo {
+        width: 100%;
+        padding: 2rem 5rem;
+    }
+    
+    .divisor {
+        flex-wrap: wrap;
+    }
+
+    .aviso {
+        padding: 2rem 5rem;
+    }
+}
