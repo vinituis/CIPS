@@ -1,0 +1,39 @@
+.conteudo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 10rem;
+}
+
+hr {
+    width: 100%;
+    background-color: var(--cor-2);
+    margin: 1rem 0;
+    padding: 1px 0;
+    border: none;
+}
+
+.divisor {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.divisor img {
+    width: auto;
+}
+
+.divisor .title {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.divisor p {
+    width: 100%;
+    margin-bottom: 1rem;
+}

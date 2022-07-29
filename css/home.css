@@ -1,0 +1,64 @@
+header .banner {
+    width: 100%;
+    display: flex;
+}
+
+.dados {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-1);
+    padding: 1rem 0;
+}
+
+.dados .dado {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dados .dado .icon img {
+    min-width: 5rem;
+    width: 100%;
+}
+
+.dados .dado .text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    padding-left: 2rem;
+}
+
+.dados .dado .text span {
+    color: var(--cor-2);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.parcerias {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.parcerias h2 {
+    padding: 2rem 0px;
+}
+
+.parcerias .parceiros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.parcerias .parceiro img {
+    width: 15rem;
+}

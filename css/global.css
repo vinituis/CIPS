@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    width: 100%;
+}
+
+:root {
+    --cor-1: #1c8581;
+    --cor-2: #faa613;
+    --cor-3: #4d4d4d;
+    --cor-4: #2d3047;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--cor-4);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+p {
+    color: var(--cor-4);
+    font-size: 1rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* ---------------------------- Navbar (menu) ---------------------------- */
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    background-color: var(--cor-1);
+    color: #fff;
+}
+
+nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--cor-1);
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: pointer;
+}
+
+nav .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 2px solid var(--cor-2);
+}
+
+nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+nav .logo img {
+    max-width: 6rem;
+}
+
+nav .nav-itens {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+/* ---------------------------- Footer (rodape) ---------------------------- */
+
+footer {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--cor-2);
+}
+
+footer .col1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 20rem;
+    padding: 2rem;
+}
+
+footer .col2,
+footer .col3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 20rem;
+    padding: 2rem;
+}
+
+footer .redes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+footer form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+footer button {
+    margin-top: 1rem;
+}
+
+footer input {
+    width: 100%;
+    border: none;
+    height: 2rem;
+}
+
+footer textarea {
+    width: 100%;
+    border: none;
+    height: 5rem;
+}
+
+footer textarea::placeholder,
+footer input::placeholder {
+    padding: 1rem;
+}
+
+footer .btn {
+    background-color: var(--cor-4);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 2rem;
+
+}
