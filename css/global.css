@@ -39,6 +39,23 @@ p {
     font-weight: bold;
 }
 
+hr {
+    width: 100%;
+    background-color: var(--cor-2);
+    margin: 1rem 0;
+    padding: 1px 0;
+    border: none;
+}
+
+.conteudo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 10rem;
+}
+
 /* ---------------------------- Navbar (menu) ---------------------------- */
 
 nav {

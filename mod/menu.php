@@ -1,12 +1,12 @@
 <nav>
 	<div class="logo">
-		<img src="./images/logo-n.svg" alt="">
+		<a href="./home.php"><img src="./images/logo-n.svg" alt=""></a>
 	</div>
 	<div class="nav-itens">
 		<div class="nav-item dropdown">Conheça
             <div class="dropdown-content">
                 <a href="./sobre.php">Sobre a CIPS 26 de Julho</a>
-                <a href="#">Nosso impacto</a>
+                <a href="./impacto.php">Nosso impacto</a>
                 <a href="#">Equipe</a>
             </div>
         </div>
