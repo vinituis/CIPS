@@ -3,6 +3,7 @@
 <head>
 	<?php include "./mod/cabecalho.php"?>
     <link rel="stylesheet" href="./css/impacto.css">
+    <script src="https://kit.fontawesome.com/77f6bd1ed5.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -13,25 +14,31 @@
     <hr>
     <div class="itens">
         <div class="item">
-            <img src="#" alt="">
-            <p>15.000 Cestas Básicas</p>
+            <p class="title">15.000</p>
+            <i class="fas fa-shopping-basket"></i>
+            <p>Cestas Básicas</p>
         </div>
         <div class="item">
-            <img src="#" alt="">
-            <p>16.000 Ovos de Páscoa</p>
+            <p class="title">15.000</p>
+            <i class="fas fa-shopping-basket"></i>
+            <p>Cestas Básicas</p>
         </div>
         <div class="item">
-            <img src="#" alt="">
-            <p>3.000 kg de hortifruti</p>
+            <p class="title">15.000</p>
+            <i class="fas fa-shopping-basket"></i>
+            <p>Cestas Básicas</p>
         </div>
         <div class="item">
-            <img src="#" alt="">
-            <p>16.000 latinhas de refrigerantes</p>
+            <p class="title">15.000</p>
+            <i class="fas fa-shopping-basket"></i>
+            <p>Cestas Básicas</p>
         </div>
         <div class="item">
-            <img src="#" alt="">
-            <p>2000 famílias impactadas</p>
+            <p class="title">15.000</p>
+            <i class="fas fa-shopping-basket"></i>
+            <p>Cestas Básicas</p>
         </div>
+        
     </div>
     <div class="cuidado">
         <h2>Nós estamos cuidando das pessoas e das familias</h2>
