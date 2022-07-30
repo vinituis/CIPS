@@ -1,0 +1,25 @@
+.itens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem 5rem;
+}
+
+.item img {
+    background-color: var(--cor-1);
+    width: 10rem;
+    border-radius: 50%;
+    height: 10rem;
+}
+
+.item p {
+    text-align: center;
+}

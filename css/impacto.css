@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+.itens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    margin: 2rem;
+}
+
+.item img {
+    background-color: var(--cor-1);
+    width: 20rem;
+    border-radius: 8px;
+    height: 8rem;
+}
+
+.item p {
+    text-align: center;
+}
+
+.cuidado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cuidado .divisor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+    flex-wrap: nowrap;
+}
+
+.cuidado .divisor .numero {
+    background-color: var(--cor-2);
+    border-radius: 4px;
+    padding: 0.2rem 1rem;
+    font-size: 2rem;
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    color: var(--cor-4);
+}
