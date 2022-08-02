@@ -16,7 +16,7 @@
                 <a href="./projeto.php">Telecentro 26 de Julho</a>
             </div>
         </div>
-		<div class="nav-item">Apoie nossa causa</div>
-		<div class="nav-item">Transparencia</div>
+		<a href="./apoie.php"><div class="nav-item">Apoie nossa causa</div></a>
+		<a href="./transparencia.php"><div class="nav-item">Transparencia</div></a>
 	</div>
 </nav>
