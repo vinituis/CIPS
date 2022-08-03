@@ -1,3 +1,21 @@
+<?php 
+require './repository/conexao.php';
+
+$sql = "SELECT * FROM home";
+if($res=mysqli_query($conn, $sql)){
+	$i = 0;
+	while ($reg = mysqli_fetch_assoc($res)) {
+		$id[$i] = $reg['id'];
+		$end_rua[$i] = $reg['end_rua'];
+		$end_cep[$i] = $reg['end_cep'];
+		$end_tel[$i] = $reg['end_tel'];
+		$end_email[$i] = $reg['end_email'];
+		$end_twitter[$i] = $reg['end_twitter'];
+		$end_face[$i] = $reg['end_face'];
+		$end_insta[$i] = $reg['end_insta'];
+		$link_btn[$i] = $reg['link_btn'];
+?>
+
 <footer>
 	<div class="col1">
 		<h3>Sede Administrativa</h3>
@@ -26,3 +44,7 @@
 		<a href="<?php echo $link_btn[0]; ?>"><button class="btn">Veja como colaborar!</button></a>
 	</div>
 </footer>
+
+<?php
+	}}
+?>

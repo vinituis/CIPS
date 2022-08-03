@@ -3,31 +3,12 @@ require './repository/conexao.php';
 
 $sql = "SELECT * FROM home";
 if($res=mysqli_query($conn, $sql)){
-	$id = array();
-	$banner = array();
-	$familias = array();
-	$cestas = array();
-	$end_rua = array();
-	$end_cep = array();
-	$end_tel = array();
-	$end_email = array();
-	$end_twitter = array();
-	$end_face = array();
-	$end_insta = array();
 	$i = 0;
 	while ($reg = mysqli_fetch_assoc($res)) {
 		$id[$i] = $reg['id'];
 		$banner[$i] = $reg['banner'];
 		$familias[$i] = $reg['familias'];
 		$cestas[$i] = $reg['cestas'];
-		$end_rua[$i] = $reg['end_rua'];
-		$end_cep[$i] = $reg['end_cep'];
-		$end_tel[$i] = $reg['end_tel'];
-		$end_email[$i] = $reg['end_email'];
-		$end_twitter[$i] = $reg['end_twitter'];
-		$end_face[$i] = $reg['end_face'];
-		$end_insta[$i] = $reg['end_insta'];
-		$link_btn[$i] = $reg['link_btn'];
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +18,6 @@ if($res=mysqli_query($conn, $sql)){
 		include "./mod/cabecalho.php";
 	?>
 	<link rel="stylesheet" href="./css/home.css">
-	<script src="https://kit.fontawesome.com/77f6bd1ed5.js" crossorigin="anonymous"></script>
 
 </head>
 <body>

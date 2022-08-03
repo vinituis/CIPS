@@ -4,3 +4,4 @@
 <title>CPIS</title>
 <!-- CSS Global -->
 <link rel="stylesheet" href="./css/global.css">
+<script src="https://kit.fontawesome.com/77f6bd1ed5.js" crossorigin="anonymous"></script>
