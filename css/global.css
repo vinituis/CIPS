@@ -166,6 +166,12 @@ footer .redes {
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
+    margin-top: 1rem;
+}
+
+footer .redes p a i {
+    font-size: 2rem;
+    color: var(--cor-4);
 }
 
 footer form {
@@ -205,7 +211,7 @@ footer .btn {
     border: none;
     border-radius: 6px;
     padding: 0.6rem 2rem;
-
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 1000px) {

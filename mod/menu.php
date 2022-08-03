@@ -12,8 +12,20 @@
         </div>
 		<div class="nav-item dropdown">Projetos
             <div class="dropdown-content">
-                <a href="./projeto.php">CCA 26 de Julho</a>
-                <a href="./projeto.php">Telecentro 26 de Julho</a>
+                <?php
+                require "./repository/conexao.php";
+                
+                $sql = 'SELECT * FROM projetos';
+                    if($res=mysqli_query($conn, $sql)){
+                        $id = array();
+                        $nome = array();
+                        $i = 0;
+                        while ($reg = mysqli_fetch_assoc($res)) {
+                            $id[$i] = $reg['id'];
+                            $nome[$i] = $reg['nome'];
+                ?>
+                <a href="./projeto.php?id=<?php echo $id[$i]; ?>"><?php echo $nome[$i]; ?></a>
+                <?php }} ?>
             </div>
         </div>
 		<a href="./apoie.php"><div class="nav-item">Apoie nossa causa</div></a>
