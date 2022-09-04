@@ -214,6 +214,10 @@ footer .btn {
     cursor: pointer;
 }
 
+.btn-pag {
+    width: fit-content;
+}
+
 @media only screen and (max-width: 1000px) {
     .conteudo {
         width: 100%;

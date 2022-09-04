@@ -28,6 +28,15 @@ if($res=mysqli_query($conn, $sql)){
 			<p><a href="<?php echo $end_face[0]; ?>"><i class="fab fa-facebook-square"></i></a></p>
 			<p><a href="<?php echo $end_insta[0]; ?>"><i class="fab fa-instagram-square"></i></a></p>
 		</div>
+		<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+		<form class="btn-pag" action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
+		<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+			<input type="hidden" name="currency" value="BRL" />
+			<input type="hidden" name="receiverEmail" value="financeiro26dejulho@gmail.com" />
+			<input type="hidden" name="iot" value="button" />
+			<input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/209x48-doar-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+			</form>
+		<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
 	</div>
 	<div class="col2">
 		<h3>Contato</h3>
@@ -47,4 +56,6 @@ if($res=mysqli_query($conn, $sql)){
 
 <?php
 	}}
+	mysqli_close($conn);
+
 ?>

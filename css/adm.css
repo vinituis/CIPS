@@ -1,0 +1,146 @@
+/* ---------------------------- Login --------------------------- */
+
+.conteudo-login {
+    height: 100vh;
+    background-color: var(--cor-1);
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--cor-2);
+    padding: 3rem 4rem;
+    border-radius: 1rem;
+    width: 100%;
+    min-width: 250px;
+    max-width: 700px;
+}
+
+.login form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.login form input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+}
+
+.login form input.btn {
+    background-color: var(--cor-4);
+    color: #fff;
+    cursor: pointer;
+}
+
+.login form input.btn:hover {
+    background-color: var(--cor-2);
+    border: 2px solid var(--cor-4);
+    padding: calc(0.5rem - 2px);
+    color: var(--cor-4);
+}
+
+/* ---------------------------- Tabela -------------------------- */
+
+.tabela {
+    width: 100%;
+}
+
+.tabela table {
+    width: 100%;
+    text-align: center;
+}
+
+.tabela table td {
+    border: 1px solid var(--cor-1);
+}
+
+.tabela table thead {
+    border: 1px solid var(--cor-1);
+    background-color: var(--cor-1);
+    color: #fff;
+}
+
+.tabela table td.action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.tabela table td.action a {
+    width: 50%;
+}
+/* ---------------------------- Form ---------------------------- */
+
+.form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.form span, span {
+    background-color: var(--cor-4);
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.form-insert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 0.5rem;
+}
+
+.form-insert .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+
+.form-insert input {
+    width: 100%;
+    max-width: 550px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--cor-1) !important;
+    color: var(--cor-1);
+    border: none;
+    border-radius: 8px;
+}
+
+.form-insert input::placeholder {
+    color: var(--cor-1);
+}
+
+.form-insert input.btn {
+    background-color: var(--cor-2);
+    color: var(--cor-4);
+    font-weight: bold;
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+}
