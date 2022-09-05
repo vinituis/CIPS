@@ -21,7 +21,7 @@ $sql = "UPDATE home SET banner = '$banner' , familias = '$familias' , cestas = '
 
 if (mysqli_query($conn, $sql)) {
     $_SESSION['atualiza_page'] = "Página atualizada com sucesso!";
-    header('location:../inicial');
+    header('location:../inicial.php');
 } else {
     $_SESSION['atualiza_page'] = "Houve um erro: " . mysqli_error($conn);
 }

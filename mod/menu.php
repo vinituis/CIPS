@@ -23,9 +23,11 @@
                         while ($reg = mysqli_fetch_assoc($res)) {
                             $id[$i] = $reg['id'];
                             $nome[$i] = $reg['nome'];
+                            $status[$i] = $reg['status'];
+                            if($status[$i] == 'ativo'){
                 ?>
                 <a href="./projeto.php?id=<?php echo $id[$i]; ?>"><?php echo $nome[$i]; ?></a>
-                <?php }} ?>
+                <?php }}} ?>
             </div>
         </div>
 		<a href="./apoie.php"><div class="nav-item">Apoie nossa causa</div></a>

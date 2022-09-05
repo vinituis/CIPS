@@ -17,7 +17,7 @@ $result = mysqli_query($conn, $select);
 if(mysqli_num_rows($result) > 0){
 
     $_SESSION['status_usu'] = "Erro ao criar usuário";
-    header('location:../usuarios');
+    header('location:../usuarios.php');
 
 }else{
 
@@ -25,7 +25,7 @@ if(mysqli_num_rows($result) > 0){
     mysqli_query($conn, $insert);
     if($insert){
         $_SESSION['status_usu'] = "Usuário criado com sucesso!";
-        header('location:../usuarios');
+        header('location:../usuarios.php');
     }
 }
 

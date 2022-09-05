@@ -25,6 +25,11 @@ session_start();
             unset($_SESSION['atualiza_status']);            
             echo '<span>'.$msgUsu.'</span>';
         }
+        if(isset($_SESSION['atualiza_page'])){
+            $msgUsu = $_SESSION['atualiza_page'];
+            unset($_SESSION['atualiza_page']);            
+            echo '<span>'.$msgUsu.'</span>';
+        }
     ?>
     <div class="tabela">
         
@@ -57,13 +62,13 @@ session_start();
                     <a href="./funcionalidades/troca_status_proj.php?id=<?php echo $id[$i]; ?>&status=ativo"><p>Ativar</p></a>
                     <a href="./funcionalidades/troca_status_proj.php?id=<?php echo $id[$i]; ?>&status=inativo"><p>bloquear</p></a>
                 </td>
-                <td><a href="./funcionalidades/troca_status.php?id=<?php echo $id[$i]; ?>&status=inativo"><p>editar</p></a></td>
+                <td><a href="./funcionalidades/editar_proj.php?id=<?php echo $id[$i]; ?>&status=inativo"><p>editar</p></a></td>
             </tr>
             <?php }} ?>
         </table>
     </div>
     <hr>
-    <div class="form">
+    <!-- <div class="form">
         <?php
         if(isset($_SESSION['status_usu'])){
             $msg = $_SESSION['status_usu'];
@@ -79,7 +84,7 @@ session_start();
             <small>Os usuários criados no sistema ficam bloqueados, é necessario liberação manual</small>
             <input type="submit" name="submit" class="btn" value="Criar">
         </form>
-    </div>
+    </div> -->
 
 </div>
 

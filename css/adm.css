@@ -120,8 +120,12 @@
     min-width: 300px;
 }
 
+.form-insert .item.item-desc {
+    width: 100%;
+}
 
-.form-insert input {
+.form-insert input, 
+.form-insert textarea {
     width: 100%;
     max-width: 550px;
     padding: 0.5rem 1rem;
@@ -129,6 +133,21 @@
     color: var(--cor-1);
     border: none;
     border-radius: 8px;
+}
+
+.form-insert textarea::-webkit-scrollbar {
+    width: 1rem;
+    border-left: 1px solid var(--cor-1);
+    border-radius: 18px 18px 0 0;
+}
+
+.form-insert textarea::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.form-insert textarea::-webkit-scrollbar-thumb {
+    background-color: var(--cor-2);
+    border-radius: 18px;
 }
 
 .form-insert input::placeholder {

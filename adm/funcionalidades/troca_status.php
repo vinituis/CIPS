@@ -12,10 +12,10 @@ $sql = "UPDATE user SET status = '$status' WHERE id = '$id_page'";
 
 if (mysqli_query($conn, $sql)) {
     $_SESSION['atualiza_status'] = "Usuário atualizado com sucesso!";
-    header('location:../usuarios');
+    header('location:../usuarios.php');
 } else {
     $_SESSION['atualiza_status'] = "Ocorreu um erro";
-    header('location:../usuarios');
+    header('location:../usuarios.php');
 }
 
 ?>

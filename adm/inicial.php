@@ -42,7 +42,7 @@ if($res=mysqli_query($conn, $sql)){
             echo '<span>'.$msg.'</span>';
         }
     ?>
-    <form class="form-insert" action="./funcionalidades/troca_dado?id=<?php echo $id[0]; ?>" method="POST">
+    <form class="form-insert" action="./funcionalidades/troca_dado.php?id=<?php echo $id[0]; ?>" method="POST">
         <div class="item">
             <label for="banner">Banner</label>
             <input type="text" id="banner" name="banner" value="<?php echo $banner[0]; ?>">
@@ -87,7 +87,7 @@ if($res=mysqli_query($conn, $sql)){
             <label for="link">link</label>
             <input type="text" id="link" name="link" value="<?php echo $link_btn[0]; ?>">
         </div>
-        <input type="submit" name="submit" class="btn" value="Não funcional ainda">
+        <input type="submit" name="submit" class="btn" value="Alterar dados">
     </form>
 </div>
 

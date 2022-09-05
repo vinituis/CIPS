@@ -45,7 +45,7 @@ session_start();
                     $i = 0;
                     while ($reg = mysqli_fetch_assoc($res)) {
                         $id[$i] = $reg['id'];
-                        $nome[$i] = $reg['nome'];
+                        $nome[$i] = $reg['name'];
                         $login[$i] = $reg['login'];
                         $status[$i] = $reg['status'];
                 ?>
