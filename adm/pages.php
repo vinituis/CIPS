@@ -17,7 +17,7 @@ session_start();
 
 
 <div class="conteudo">
-    <h2>Usuários</h2>
+    <h2>Páginas</h2>
     <hr>
     <?php
         if(isset($_SESSION['atualiza_status'])){
@@ -25,44 +25,38 @@ session_start();
             unset($_SESSION['atualiza_status']);            
             echo '<span>'.$msgUsu.'</span>';
         }
+        if(isset($_SESSION['atualiza_page'])){
+            $msgUsu = $_SESSION['atualiza_page'];
+            unset($_SESSION['atualiza_page']);            
+            echo '<span>'.$msgUsu.'</span>';
+        }
     ?>
     <div class="tabela">
         
         <table>
             <thead>
-                <td>Nome</td>
-                <td>Login</td>
-                <td>Status</td>
+                <td>Título</td>
                 <td>Ação</td>
             </thead>
             <?php            
-            $sql = 'SELECT * FROM user';
+            $sql = 'SELECT * FROM pages';
                 if($res=mysqli_query($conn, $sql)){
                     $id = array();
-                    $nome = array();
-                    $login = array();
-                    $status = array();
+                    $titulo = array();
                     $i = 0;
                     while ($reg = mysqli_fetch_assoc($res)) {
                         $id[$i] = $reg['id'];
-                        $nome[$i] = $reg['name'];
-                        $login[$i] = $reg['login'];
-                        $status[$i] = $reg['status'];
+                        $titulo[$i] = $reg['titulo'];
                 ?>
             <tr>
-                <td><?php echo $nome[$i]; ?></td>
-                <td><?php echo $login[$i]; ?></td>
-                <td><?php echo $status[$i]; ?></td>
-                <td class="action">
-                    <a href="./funcionalidades/troca_status.php?id=<?php echo $id[$i]; ?>&status=ativo"><p>Ativar</p></a>
-                    <a href="./funcionalidades/troca_status.php?id=<?php echo $id[$i]; ?>&status=block"><p>bloquear</p></a>
-                </td>
+                <td><?php echo $titulo[$i]; ?></td>
+                <td><a href="./funcionalidades/edita_page?id=<?php echo $id[$i]; ?>"><p>editar</p></a></td>
             </tr>
             <?php }} ?>
         </table>
     </div>
     <hr>
-    <div class="form">
+    <!-- <div class="form">
         <?php
         if(isset($_SESSION['status_usu'])){
             $msg = $_SESSION['status_usu'];
@@ -78,8 +72,8 @@ session_start();
             <small>Os usuários criados no sistema ficam bloqueados, é necessario liberação manual</small>
             <input type="submit" name="submit" class="btn" value="Criar">
         </form>
-    </div>
-<hr>
+    </div> -->
+
 </div>
 
 <?php mysqli_close($conn); ?>

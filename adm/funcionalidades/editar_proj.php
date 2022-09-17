@@ -27,7 +27,7 @@ if($res=mysqli_query($conn, $sql)){
 <body>
 
 <div class="conteudo">
-    <h2>Editar <?php echo $nome[$i]; ?></h2>
+    <h2>Editar Projeto | <?php echo $nome[$i]; ?></h2>
     <hr>
     <form class="form-insert" action="./troca_dado_proj.php?id=<?php echo $id_proj; ?>" method="POST">
         <div class="item">

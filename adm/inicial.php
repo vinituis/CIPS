@@ -20,6 +20,8 @@ if($res=mysqli_query($conn, $sql)){
 		$end_face[$i] = $reg['end_face'];
 		$end_insta[$i] = $reg['end_insta'];
 		$link_btn[$i] = $reg['link_btn'];
+		$page[$i] = $reg['page'];
+        if($page[$i] == 'home'){
 ?>
 
 <!DOCTYPE html>
@@ -42,57 +44,59 @@ if($res=mysqli_query($conn, $sql)){
             echo '<span>'.$msg.'</span>';
         }
     ?>
-    <form class="form-insert" action="./funcionalidades/troca_dado.php?id=<?php echo $id[0]; ?>" method="POST">
+    <form class="form-insert" action="./funcionalidades/troca_dado.php?id=<?php echo $id[$i]; ?>" method="POST">
         <div class="item">
             <label for="banner">Banner</label>
-            <input type="text" id="banner" name="banner" value="<?php echo $banner[0]; ?>">
+            <input type="text" id="banner" name="banner" value="<?php echo $banner[$i]; ?>">
         </div>
         <div class="item">
             <label for="familias">familias</label>
-            <input type="text" id="familias" name="familias" value="<?php echo $familias[0]; ?>">
+            <input type="text" id="familias" name="familias" value="<?php echo $familias[$i]; ?>">
         </div>
         <div class="item">
             <label for="cestas">cestas</label>
-            <input type="text" id="cestas" name="cestas" value="<?php echo $cestas[0]; ?>">
+            <input type="text" id="cestas" name="cestas" value="<?php echo $cestas[$i]; ?>">
         </div>
+        <div style="width: 100%; text-align:center; margin: 1rem;"><h2>Informações do Rodapé</h2></div>
         <div class="item">
             <label for="rua">rua</label>
-            <input type="text" id="rua" name="rua" value="<?php echo $end_rua[0]; ?>">
+            <input type="text" id="rua" name="rua" value="<?php echo $end_rua[$i]; ?>">
         </div>
         <div class="item">
             <label for="cep">cep</label>
-            <input type="text" id="cep" name="cep" value="<?php echo $end_cep[0]; ?>">
+            <input type="text" id="cep" name="cep" value="<?php echo $end_cep[$i]; ?>">
         </div>
         <div class="item">
             <label for="tel">tel</label>
-            <input type="text" id="tel" name="tel" value="<?php echo $end_tel[0]; ?>">
+            <input type="text" id="tel" name="tel" value="<?php echo $end_tel[$i]; ?>">
         </div>
         <div class="item">
             <label for="email">email</label>
-            <input type="text" id="email" name="email" value="<?php echo $end_email[0]; ?>">
+            <input type="text" id="email" name="email" value="<?php echo $end_email[$i]; ?>">
         </div>
         <div class="item">
             <label for="twitter">twitter</label>
-            <input type="text" id="twitter" name="twitter" value="<?php echo $end_twitter[0]; ?>">
+            <input type="text" id="twitter" name="twitter" value="<?php echo $end_twitter[$i]; ?>">
         </div>
         <div class="item">
             <label for="facebook">facebook</label>
-            <input type="text" id="facebook" name="facebook" value="<?php echo $end_face[0]; ?>">
+            <input type="text" id="facebook" name="facebook" value="<?php echo $end_face[$i]; ?>">
         </div>
         <div class="item">
             <label for="instagram">instagram</label>
-            <input type="text" id="instagram" name="instagram" value="<?php echo $end_insta[0]; ?>">
+            <input type="text" id="instagram" name="instagram" value="<?php echo $end_insta[$i]; ?>">
         </div>
         <div class="item">
             <label for="link">link</label>
-            <input type="text" id="link" name="link" value="<?php echo $link_btn[0]; ?>">
+            <input type="text" id="link" name="link" value="<?php echo $link_btn[$i]; ?>">
         </div>
         <input type="submit" name="submit" class="btn" value="Alterar dados">
     </form>
+    <hr>
 </div>
 
 <?php 
-    }}
+    }}}
 mysqli_close($conn); 
 
 ?>
