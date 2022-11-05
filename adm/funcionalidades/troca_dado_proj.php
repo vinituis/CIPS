@@ -4,10 +4,20 @@ session_start();
 
 include '../../repository/conexao.php';
 
+if(isset($_FILES['img'])){
+
+    $extensao = strtolower(substr($_FILES['img']['name'], -4)); //pega a extensao do arquivo
+    $novo_nome = md5(time()) . $extensao; //define o nome do arquivo
+    $diretorio = "upload/projeto/"; //define o diretorio para onde enviaremos o arquivo
+
+    move_uploaded_file($_FILES['img']['tmp_name'], $diretorio.$novo_nome); //efetua o upload
+
+}
+
 $id_page = $_GET['id'];
 $nome = $_POST['titulo'];
 $subtitulo = $_POST['subtitulo'];
-$imagem = $_POST['img'];
+$imagem = './adm/funcionalidades/'.$diretorio.$novo_nome;
 $descricao = $_POST['descricao'];
 $status = 'inativo';
 

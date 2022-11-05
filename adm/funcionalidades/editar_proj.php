@@ -29,7 +29,7 @@ if($res=mysqli_query($conn, $sql)){
 <div class="conteudo">
     <h2>Editar Projeto | <?php echo $nome[$i]; ?></h2>
     <hr>
-    <form class="form-insert" action="./troca_dado_proj.php?id=<?php echo $id_proj; ?>" method="POST">
+    <form class="form-insert" action="./troca_dado_proj.php?id=<?php echo $id_proj; ?>" method="POST" enctype="multipart/form-data">
         <div class="item">
             <label for="titulo">Título</label>
             <input type="text" id="titulo" name="titulo" value="<?php echo $nome[$i]; ?>">
@@ -40,7 +40,7 @@ if($res=mysqli_query($conn, $sql)){
         </div>
         <div class="item">
             <label for="img">Imagem</label>
-            <input type="text" id="img" name="img" value="<?php echo $img[$i]; ?>">
+            <input type="file" required name="img" id="img">
         </div>
         <div class="item item-desc">
             <label for="descricao">Descrição</label>

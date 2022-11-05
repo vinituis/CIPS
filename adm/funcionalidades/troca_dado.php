@@ -4,8 +4,20 @@ session_start();
 
 include '../../repository/conexao.php';
 
+
+if(isset($_FILES['banner'])){
+
+    $extensao = strtolower(substr($_FILES['banner']['name'], -4)); //pega a extensao do arquivo
+    $novo_nome = md5(time()) . $extensao; //define o nome do arquivo
+    $diretorio = "upload/banner/"; //define o diretorio para onde enviaremos o arquivo
+
+    move_uploaded_file($_FILES['banner']['tmp_name'], $diretorio.$novo_nome); //efetua o upload
+
+}
+
+
 $id_page = $_GET['id'];
-$banner = $_POST['banner'];
+$banner = './adm/funcionalidades/'.$diretorio.$novo_nome;
 $familias = $_POST['familias'];
 $cestas = $_POST['cestas'];
 $end_rua = $_POST['rua'];
@@ -18,6 +30,8 @@ $end_insta = $_POST['instagram'];
 $link_btn = $_POST['link'];
 
 $sql = "UPDATE home SET banner = '$banner' , familias = '$familias' , cestas = '$cestas' , end_rua = '$end_rua' , end_cep = '$end_cep' , end_tel = '$end_tel' , end_email = '$end_email' , end_twitter = '$end_twitter' , end_face = '$end_face' , end_insta = '$end_insta' , link_btn = '$link_btn' WHERE id = '$id_page'";
+
+var_dump($sql);
 
 if (mysqli_query($conn, $sql)) {
     $_SESSION['atualiza_page'] = "Página atualizada com sucesso!";
