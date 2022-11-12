@@ -15,9 +15,13 @@ if(isset($_FILES['banner'])){
 
 }
 
+if($extensao == ''){
+    $banner = '';
+}else{
+    $banner = './adm/funcionalidades/'.$diretorio.$novo_nome;
+}
 
 $id_page = $_GET['id'];
-$banner = './adm/funcionalidades/'.$diretorio.$novo_nome;
 $familias = $_POST['familias'];
 $cestas = $_POST['cestas'];
 $end_rua = $_POST['rua'];

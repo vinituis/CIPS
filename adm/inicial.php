@@ -46,8 +46,17 @@ if($res=mysqli_query($conn, $sql)){
     ?>
     <form class="form-insert" action="./funcionalidades/troca_dado.php?id=<?php echo $id[$i]; ?>" method="POST" enctype="multipart/form-data">
         <div class="item">
+            <?php
+            if($banner[$i] == ''){
+            ?>
             <label for="banner">Banner</label>
             <input type="file" required name="banner" id="banner">
+            <?php
+            }else{
+                ?>
+            <label for="banner">Banner</label>
+            <input type="text" id="banner" name="banner" value="<?php echo $banner[$i]; ?>">
+            <?php } ?>
         </div>
         <div class="item">
             <label for="familias">familias</label>

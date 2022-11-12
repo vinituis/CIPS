@@ -56,6 +56,7 @@ if($res=mysqli_query($conn, $sql)){
         
         <input type="submit" name="submit" class="btn" value="Editar página">
     </form>
+    <a class="voltar" href="../pages.php">Cancelar</a>
 </div>
 
 <?php 

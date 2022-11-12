@@ -39,8 +39,17 @@ if($res=mysqli_query($conn, $sql)){
             <input type="text" id="subtitulo" name="subtitulo" value="<?php echo $subtitulo[$i]; ?>">
         </div>
         <div class="item">
+            <?php
+            if($img[$i] == ''){
+            ?>
             <label for="img">Imagem</label>
             <input type="file" required name="img" id="img">
+            <?php
+            }else{
+                ?>
+            <label for="img">Imagem</label>
+            <input type="text" id="img" name="img" value="<?php echo $img[$i]; ?>">
+            <?php } ?>
         </div>
         <div class="item item-desc">
             <label for="descricao">Descrição</label>
@@ -48,6 +57,7 @@ if($res=mysqli_query($conn, $sql)){
         </div>
         <input type="submit" name="submit" class="btn" value="Editar projeto">
     </form>
+    <a class="voltar" href="../projetos.php">Cancelar</a>
 </div>
 
 

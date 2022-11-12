@@ -14,10 +14,15 @@ if(isset($_FILES['img'])){
 
 }
 
+if($extensao == ''){
+    $imagem = '';
+}else{
+    $imagem = './adm/funcionalidades/'.$diretorio.$novo_nome;
+}
+
 $id_page = $_GET['id'];
 $nome = $_POST['titulo'];
 $subtitulo = $_POST['subtitulo'];
-$imagem = './adm/funcionalidades/'.$diretorio.$novo_nome;
 $descricao = $_POST['descricao'];
 $status = 'inativo';
 
